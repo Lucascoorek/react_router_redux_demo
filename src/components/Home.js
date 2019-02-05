@@ -5,16 +5,15 @@ class Home extends Component {
   state = {
     posts: []
   };
-  // componentDidMount() {
-  //   axios.get("https://jsonplaceholder.typicode.com/posts").then(res => {
-  //     this.setState({
-  //       posts: res.data.slice(0, 10)
-  //     });
-  //   });
-  // }
+  componentDidMount() {
+    axios.get("https://jsonplaceholder.typicode.com/posts").then(res => {
+      this.setState({
+        posts: res.data.slice(0, 10)
+      });
+    });
+  }
 
   render() {
-    console.log(this.state.posts.length);
     const posts = this.state.posts.length ? (
       this.state.posts.map(post => {
         return (
