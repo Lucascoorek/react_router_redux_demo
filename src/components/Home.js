@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Flaming from "../flaming.png";
+import Flaming from "../icon.png";
 
 class Home extends Component {
   state = {
