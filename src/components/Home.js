@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Flaming from "../flaming.png";
 
 class Home extends Component {
   state = {
@@ -19,6 +20,7 @@ class Home extends Component {
       this.state.posts.map(post => {
         return (
           <div className="post card" key={post.id}>
+            <img src={Flaming} alt="A flamingo" />
             <div className="card-content">
               <Link to={`/${post.id}`}>
                 <span className="card-title">{post.title}</span>
@@ -32,7 +34,7 @@ class Home extends Component {
       <div className="center">Waiting for data</div>
     );
     return (
-      <div className="container">
+      <div className="container home">
         <h4 className="center">Home</h4>
         <div>{posts}</div>
       </div>
